@@ -78,7 +78,7 @@ def mk_contract_address(sender, nonce):
     return sha3(rlp.encode([normalize_address(sender), nonce]))[12:]
 ```
 
-이렇게 컨트랙트가 배포되는 주소를 알 수 있기 때문에\
+이렇게 컨트랙트가 배포되는 주소를 미리 알 수 있기 때문에\
 컨트랙트를 배포하기 전 이더를 먼저 보낸 다음에 컨트랙트를 배포한다면\
 fallback, receive 함수가 없더라도 이더리움을 갖고 있을 수 있습니다.
 
